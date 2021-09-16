@@ -7,7 +7,7 @@ const Technologies = () =>  (
   <Section id="tech">
     <SectionDivider />
     <br />
-    <SectionTitle>Technologies</SectionTitle>
+    <SectionTitle style={{height:'1.2em'}}>Technologies</SectionTitle>
     <br />
     <SectionText>I have worked on this project asasd</SectionText>
     <List>
@@ -16,7 +16,7 @@ const Technologies = () =>  (
         <br />
         <ListContainer>
           <ListTitle>Front-end</ListTitle>
-          <ListParagraph>Experience with React.JS</ListParagraph>
+          <ListParagraph>Experience with React.JS, Next.JS (this website)</ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
@@ -24,7 +24,7 @@ const Technologies = () =>  (
         <br />
         <ListContainer>
           <ListTitle>Back-end</ListTitle>
-          <ListParagraph>Experience with Node.JS and databases</ListParagraph>
+          <ListParagraph>Experience with Node.JS, MYSQL and NOSQL databases</ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
@@ -32,7 +32,7 @@ const Technologies = () =>  (
         <br />
         <ListContainer>
           <ListTitle>Machine Learning</ListTitle>
-          <ListParagraph>Experience with Model development and deployment</ListParagraph>
+          <ListParagraph>Experience with Model development, testing and deployment</ListParagraph>
         </ListContainer>
       </ListItem>
     </List>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Router from 'next/router';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
@@ -13,8 +13,11 @@ const Hero = (props) => (
       </SectionTitle>
       <SectionText>
         
+      Contemplative coder and Analyst. Inspired by tough problems and a 'Never say Die!' attitude.
+
+        
       </SectionText>
-      <Button onClick={()=>window.location='https://google.com/'}>Learn More</Button>
+      <Button onClick={() => Router.push('/me')}>Learn More</Button>
     </LeftSection>
   </Section>
 );

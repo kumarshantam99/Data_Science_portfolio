@@ -15,7 +15,7 @@ const Acomplishments = () => (
     <SectionDivider/>
     <br />
     <br />
-    <SectionTitle>Personal Achievements</SectionTitle>
+    <SectionTitle style={{height:'1.2em'}}>Questions?</SectionTitle>
     <Boxes>
       {data.map((card, index) => (
         <Box key={index}>

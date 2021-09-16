@@ -1,36 +1,36 @@
 export const projects = [
   {
-    title: 'MERN Memories',
-    description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
+    title: 'Bitcoin Price Prediction',
+    description: "The project focuses on developing pipeline testing Machine Learning models to predict future Bitcoin Prices using Historical OHLCV Data, US Dollar Index Prices, Blockchain data and feature engineering.",
       image: '/images/1.png',
-      tags: ['Mongo', 'Express', 'React', 'Node'],
+      tags: ['Machine Learning', 'CI/CD'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 0,
   },
   {
-    title: 'E-Commerce',
-    description:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+    title: 'Time Series Modeling',
+    description:"The project revolves around storytelling- analyzing different aspects of Cryptocurrency market using visual reports. I delved into analyzing factors like Supply and Demand, correlation in movement of prices among top cryptocurrencies, Trend analysis, Technical Indicators and using Time series models like ARIMA and Facebook Prophet for forecasting future prices. ",
     image: '/images/2.png',
-    tags: ['React', 'JavaScript'],
+    tags: ['Time series', 'Forecasting'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 1,
   },
   {
-    title: 'WebRTC App',
-    description: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
+    title: 'Stock Market Prediction',
+    description: "This project was my very first attempt to utilize Analysis and ML Models to predict AAPL, MSFT, GOOG and AMZN. I decided to include this here to show how far I have come in pursuit of predicting the future!",
       image: '/images/3.jpg',
-      tags: ['React', 'WebRTC'],
+      tags: ['Deep Learning', 'EDA'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 2,
   },
   {
-    title: 'Unichat',
-    description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
+    title: 'Candidate Recommendation Engine',
+    description: "The project focuses on implementing a Recommendation Engine for job boards utilizing Natural Language Processing and Batch Processing to recommend suitable candidates from a SQL database to a job post using coded relevance scores, structured querying and BERT. ",
     image: '/images/4.jpg',
-    tags: ['React', 'ChatEngine', 'Firebase'],
+    tags: ['NLP', 'Django', 'SQL'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 3,
@@ -38,9 +38,10 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2021, text: 'Worked as a Machine Learning Engineer at Motocho', },
-  { year: 2020, text: 'Worked as a Software Developer at IdeaxDesign Corp.', },
+  { year: 2021, text: 'Worked as a Machine Learning Engineer at Motocho, San Jose, US', },
+  { year: 2021, text: 'Graduated with MS in Computer Science with concentration in Data Science', },
+  { year: 2020, text: 'Worked as a Software Developer at IdeaxDesign Corp., Rhode Island, US', },
   { year: 2018, text: 'Graduated with BE in Electronics and Communications Engineering', },
-  { year: 2017, text: 'Worked as Research Intern st Malviya National Institute of Technology, India', },
+  { year: 2017, text: 'Worked as Research Intern at Malviya National Institute of Technology, India', },
   { year: 2014, text: 'Embarked on this beautiful journey', }
 ];
