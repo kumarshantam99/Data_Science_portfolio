@@ -8,10 +8,12 @@ const Technologies = () =>  (
     <SectionDivider />
     <br />
     <SectionTitle>Technologies</SectionTitle>
+    <br />
     <SectionText>I have worked on this project asasd</SectionText>
     <List>
       <ListItem>
         <DiReact size='3rem' />
+        <br />
         <ListContainer>
           <ListTitle>Front-end</ListTitle>
           <ListParagraph>Experience with React.JS</ListParagraph>
@@ -19,6 +21,7 @@ const Technologies = () =>  (
       </ListItem>
       <ListItem>
         <DiFirebase size='3rem' />
+        <br />
         <ListContainer>
           <ListTitle>Back-end</ListTitle>
           <ListParagraph>Experience with Node.JS and databases</ListParagraph>
@@ -26,6 +29,7 @@ const Technologies = () =>  (
       </ListItem>
       <ListItem>
         <DiZend size='3rem' />
+        <br />
         <ListContainer>
           <ListTitle>Machine Learning</ListTitle>
           <ListParagraph>Experience with Model development and deployment</ListParagraph>

@@ -38,9 +38,9 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: 'Started my journey', },
-  { year: 2018, text: 'Worked as a freelance developer', },
-  { year: 2019, text: 'Founded JavaScript Mastery', },
-  { year: 2020, text: 'Shared my projects with the world', },
-  { year: 2021, text: 'Started my own platform', },
+  { year: 2021, text: 'Worked as a Machine Learning Engineer at Motocho', },
+  { year: 2020, text: 'Worked as a Software Developer at IdeaxDesign Corp.', },
+  { year: 2018, text: 'Graduated with BE in Electronics and Communications Engineering', },
+  { year: 2017, text: 'Worked as Research Intern st Malviya National Institute of Technology, India', },
+  { year: 2014, text: 'Embarked on this beautiful journey', }
 ];
