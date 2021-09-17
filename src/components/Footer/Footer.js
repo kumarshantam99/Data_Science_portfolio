@@ -28,11 +28,9 @@ const Footer = () => {
             <AiFillGithub size="3rem" />
           </SocialIcons>
           <SocialIcons href="www.linkedin.com/in/kumar-shantam">
-            <AiFillLinkedin size="3rem" />
+            <AiFillLinkedin size="3rem" style={{marginLeft:'15px'}}/>
           </SocialIcons>
-          <SocialIcons href="https://google.com">
-            <AiFillInstagram size="3rem" />
-          </SocialIcons>
+          
         </SocialContainer>
       </SocialIconsContainer>
     </FooterWrapper>

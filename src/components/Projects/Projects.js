@@ -25,11 +25,10 @@ const Projects = () => (
                 <Tag key={i}>{tag}</Tag>
               ))}
             </TagList>
-
           </div>
           <UtilityList>
             <ExternalLinks href={visit}>Code</ExternalLinks>
-            
+            <ExternalLinks href={visit}>Read!</ExternalLinks>
           </UtilityList>
         </BlogCard>
       ))}

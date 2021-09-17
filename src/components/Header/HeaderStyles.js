@@ -61,6 +61,8 @@ export const NavLink = styled.a`
     color: #fff;
     opacity: 1;
     cursor: pointer;
+    left: 6px;
+    
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;

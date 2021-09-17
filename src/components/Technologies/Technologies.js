@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { DiFirebase, DiReact, DiPython } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -19,20 +19,21 @@ const Technologies = () =>  (
           <ListParagraph>Experience with React.JS, Next.JS (this website)</ListParagraph>
         </ListContainer>
       </ListItem>
+      
+      <ListItem>
+        <DiPython size='3rem' />
+        <br />
+        <ListContainer>
+          <ListTitle>Machine Learning</ListTitle>
+          <ListParagraph>Experience with Model development, testing and deployment</ListParagraph>
+        </ListContainer>
+      </ListItem>
       <ListItem>
         <DiFirebase size='3rem' />
         <br />
         <ListContainer>
           <ListTitle>Back-end</ListTitle>
           <ListParagraph>Experience with Node.JS, MYSQL and NOSQL databases</ListParagraph>
-        </ListContainer>
-      </ListItem>
-      <ListItem>
-        <DiZend size='3rem' />
-        <br />
-        <ListContainer>
-          <ListTitle>Machine Learning</ListTitle>
-          <ListParagraph>Experience with Model development, testing and deployment</ListParagraph>
         </ListContainer>
       </ListItem>
     </List>

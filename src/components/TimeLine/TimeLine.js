@@ -63,6 +63,7 @@ const Timeline = () => {
                     height="6"
                     viewBox="0 0 208 6"
                     fill="none"
+                    style={{marginTop:'12px'}}
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                       fill-rule="evenodd"

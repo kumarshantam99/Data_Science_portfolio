@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: 'Bitcoin Price Prediction',
-    description: "The project focuses on developing pipeline testing Machine Learning models to predict future Bitcoin Prices using Historical OHLCV Data, US Dollar Index Prices, Blockchain data and feature engineering.",
+    title: 'Bitcoin Market Prediction',
+    description: "The project focuses on developing CI/CD pipeline testing Machine Learning models to predict future Bitcoin Prices and Market trends using Historical OHLCV Data, Technical Indicators, US Dollar Index Prices, Blockchain data and feature engineering.",
       image: '/images/1.png',
-      tags: ['Machine Learning', 'CI/CD'],
+      tags: ['Machine Learning', 'CI/CD', 'Pipeline'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 0,
@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'Stock Market Prediction',
     description: "This project was my very first attempt to utilize Analysis and ML Models to predict AAPL, MSFT, GOOG and AMZN. I decided to include this here to show how far I have come in pursuit of predicting the future!",
-      image: '/images/3.jpg',
+      image: '/images/3.png',
       tags: ['Deep Learning', 'EDA'],
     source: 'https://google.com',
     visit: 'https://google.com',
@@ -29,7 +29,7 @@ export const projects = [
   {
     title: 'Candidate Recommendation Engine',
     description: "The project focuses on implementing a Recommendation Engine for job boards utilizing Natural Language Processing and Batch Processing to recommend suitable candidates from a SQL database to a job post using coded relevance scores, structured querying and BERT. ",
-    image: '/images/4.jpg',
+    image: '/images/4.jpeg',
     tags: ['NLP', 'Django', 'SQL'],
     source: 'https://google.com',
     visit: 'https://google.com',
