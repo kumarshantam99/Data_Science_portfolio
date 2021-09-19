@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
+
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };
   padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
@@ -18,13 +19,14 @@ export const Section = styled.section`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
     width: calc(100vw - 32px);
     flex-direction: column;
   }
+
 `
 
 export const SectionTitle = styled.h2`
+
   font-weight: 800;
   font-size: ${(props) => props.main ? '65px' : '56px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
@@ -52,9 +54,11 @@ export const SectionTitle = styled.h2`
     padding: ${(props) => props.main ? '16px 0 8px' : '0'};
     max-width: 100%;
   }
+
 `
 
 export const SectionText = styled.p`
+
   max-width: 800px;
   font-size: 24px;
   line-height: 40px;
@@ -74,10 +78,10 @@ export const SectionText = styled.p`
     line-height: 24px;
     padding-bottom: 16px;
   }
+
 `
 
 export const SectionDivider = styled.div`
-
   width: 64px;
   height: 6px;
   border-radius: 10px;

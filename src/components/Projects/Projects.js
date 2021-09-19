@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Router from 'next/router';
 import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
@@ -28,7 +28,7 @@ const Projects = () => (
           </div>
           <UtilityList>
             <ExternalLinks href={visit}>Code</ExternalLinks>
-            <ExternalLinks href={visit}>Read!</ExternalLinks>
+            <ExternalLinks href={source}>Read!</ExternalLinks>
           </UtilityList>
         </BlogCard>
       ))}

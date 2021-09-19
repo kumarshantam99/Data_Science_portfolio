@@ -1,10 +1,11 @@
+import Router from 'next/router';
 export const projects = [
   {
     title: 'Bitcoin Market Prediction',
     description: "The project focuses on developing CI/CD pipeline testing Machine Learning models to predict future Bitcoin Prices and Market trends using Historical OHLCV Data, Technical Indicators, US Dollar Index Prices, Blockchain data and feature engineering.",
       image: '/images/1.png',
       tags: ['Machine Learning', 'CI/CD', 'Pipeline'],
-    source: 'https://google.com',
+    source: `/project1`,
     visit: 'https://google.com',
     id: 0,
   },
@@ -32,6 +33,24 @@ export const projects = [
     image: '/images/4.jpeg',
     tags: ['NLP', 'Django', 'SQL'],
     source: 'https://google.com',
+    visit: 'https://google.com',
+    id: 3,
+  },
+  {
+    title: 'Fake Job Posts',
+    description: "The project focuses on implementing a Recommendation Engine for job boards utilizing Natural Language Processing and Batch Processing to recommend suitable candidates from a SQL database to a job post using coded relevance scores, structured querying and BERT. ",
+    image: '/images/5.jpg',
+    tags: ['NLP', 'Django', 'SQL'],
+    source: 'https://http://localhost:3000/',
+    visit: 'https://google.com',
+    id: 3,
+  },
+  {
+    title: 'Analyzing Banking Transactions',
+    description: "The project focuses on implementing a Recommendation Engine for job boards utilizing Natural Language Processing and Batch Processing to recommend suitable candidates from a SQL database to a job post using coded relevance scores, structured querying and BERT. ",
+    image: '/images/4.png',
+    tags: ['Tableau', 'EDA'],
+    source: 'https://http://localhost:3000/',
     visit: 'https://google.com',
     id: 3,
   },
