@@ -1,11 +1,15 @@
 import React from 'react'
 import { Container } from '../../layout/LayoutStyles'
-
+import Head from 'next/Head';
 import { LeftSection, Section, SectionText, SectionTitle, SectionDivider } from './Project1Styles';
 
 const Project1_detail=(props)=>(
     
     <>
+    <Head>
+        <title>Bitcoin Market Prediction</title>
+        
+      </Head>
     <Section row nopadding>
         
         <img src='/images/bitcoin.gif' size='medium' />
@@ -147,7 +151,7 @@ const Project1_detail=(props)=>(
             <br />
             <p>Data Science project has a lot different constraints in terms of project tracking, integration and deployment than a regular Software Engineering project. Datasets used in a DS project are too large to be tracked by Github. With so many model experimentations owing to trying out different feature engineering techniques, playing around with Hyperparameters and other fun stuff it can become pretty messy to keep a track of all the experiments and then compare all the models.</p>
             <br />
-            <p>After spending a lot of time at <a href='https://medium.com/'style={{color:'#f1c40f'}}>Medium</a> I came across an interesting versioning tool called <a href='https://dvc.org/'style={{color:'#f1c40f'}}>DVC</a>- Data version Control. DVC offers services like Dataset and Model tracking to use Git as a tracking tool for all the projects without having to configure Git LFS. DVC offers other features like comparing results across all the branches of the project on Git to create shareable metrics reports for team members. DVC creates a '.dvc' extension for all the files that you want to track using Git and Git only tracks the .dvc extension. I also used DVC pipelining to layout the different '.py' files associated with different stage of the project like Data Acquisition, Preprocessing, Training and Validation. The configuraations are stored in 'dvc.yml' file at the root directory. The entire pipeline can be run using a single command: <i>dvc repro</i></p>
+            <p>After spending a lot of time at <a href='https://medium.com/'style={{color:'#f1c40f'}}>Medium</a> I came across an interesting versioning tool called <a href='https://dvc.org/'style={{color:'#f1c40f'}}>DVC</a>- Data version Control. DVC offers services like tracking large Dataset and Models using Git as a tracking tool for all the projects without having to configure Git LFS. DVC offers other features like comparing results across all the branches of the project on Git to create shareable metrics reports for team members. DVC creates a '.dvc' extension for all the files that you want to track using Git and Git only tracks the .dvc extension. I also used DVC pipelining to layout the different '.py' files associated with different stage of the project like Data Acquisition, Preprocessing, Training and Validation. The configuraations are stored in 'dvc.yml' file at the root directory. The entire pipeline can be run using a single command: <i>dvc repro.</i></p>
             <br />
             <Section row nopadding>
             <img src='/images/8.png' style={{'max-width':'500px','maxHeight':'700px','padding':'20px'}} />
