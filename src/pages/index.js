@@ -6,14 +6,10 @@ import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
-import Head from 'next/Head';
+
 const Home = () => {
   return (
-    <>
-    <Head>
-        <title>Kumar Shantam Portfolio</title>
-        
-      </Head>
+    
 
     <Layout>
       <Section grid>
@@ -27,8 +23,9 @@ const Home = () => {
       
       
     </Layout>
-    </>
+    
   );
 };
-
+Home.title = "Kumar Shantam Portfolio"
+Home.description = "My Data Science Portfolio"
 export default Home;

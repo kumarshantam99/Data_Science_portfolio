@@ -13,5 +13,6 @@ const Project1 = () => {
     </Layout_project>
   );
 };
-
+Project1.title='Bitcoin Market Prediction'
+Project1.description = 'Project to use ML and EDA to prdict price and market trend for BTC'
 export default Project1;

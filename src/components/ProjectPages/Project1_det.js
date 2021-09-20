@@ -1,15 +1,12 @@
 import React from 'react'
 import { Container } from '../../layout/LayoutStyles'
-import Head from 'next/Head';
+
 import { LeftSection, Section, SectionText, SectionTitle, SectionDivider } from './Project1Styles';
 
 const Project1_detail=(props)=>(
     
     <>
-    <Head>
-        <title>Bitcoin Market Prediction</title>
-        
-      </Head>
+    
     <Section row nopadding>
         
         <img src='/images/bitcoin.gif' size='medium' />
@@ -197,4 +194,6 @@ const Project1_detail=(props)=>(
     </>
 
 )
+
+
 export default Project1_detail;
