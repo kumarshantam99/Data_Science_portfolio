@@ -14,7 +14,7 @@ export const projects = [
     description:"The project revolves around storytelling- analyzing different aspects of Cryptocurrency market using visual reports. I delved into analyzing factors like Supply and Demand, correlation in movement of prices among top cryptocurrencies, Trend analysis, Technical Indicators and using Time series models like ARIMA and Facebook Prophet for forecasting future prices. ",
     image: '/images/2.png',
     tags: ['Time series', 'Forecasting'],
-    source: 'https://google.com',
+    source: '/project2',
     visit: 'https://google.com',
     id: 1,
   },

@@ -3,7 +3,7 @@ import { Container } from '../../layout/LayoutStyles'
 
 import { LeftSection, Section, SectionText, SectionTitle, SectionDivider } from './Project1Styles';
 
-const Project1_detail=(props)=>(
+const Project2_detail=(props)=>(
     
     <>
     
@@ -12,12 +12,11 @@ const Project1_detail=(props)=>(
         <img src='/images/bitcoin.gif' size='medium' />
         <LeftSection>
         <SectionTitle main center>
-       Bitcoin Market Prediction 
+       Time Series Modeling 
       </SectionTitle>
       <SectionText>
         
-        Can I forecast Bitcoin price and Market trend and become the ultimate fortune-teller?
-  
+        Continuing my BTC market prediction project, Can I uncover the mysteries that a Time series data holds?
           
         </SectionText>
         </LeftSection >
@@ -171,71 +170,12 @@ const Project1_detail=(props)=>(
             <br />
             <h2>ML Modeling</h2>
             <br />
-            <h3>XG Boost</h3>
-            <br />
-            
-            <p>
-            XGBoost is an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework.
-
-            <a href='https://xgboost.readthedocs.io/' style={{color:'#f1c40f'}}>XGBoost </a>is an ensemble of decision trees where new trees fix errors of the trees that are already part of the model. Trees are added until no further improvements can be made to the model.
-
-            Requirements to use XGBoost for time series:
-            - evaluate the model via walk-forward validation, instead of k-fold cross validation, as k-fold would have biased results.
-
+            <p>XGBoost different performances
 
             </p>
-            <br />
-            <p>
-                I decided to include SMA- Simple Moving Average, RSI- Relative Strength Index as technical indicators for initial baseline performance. 
-            </p>
-            <br />
-            <p>
-                This was a perfect opprotunity for testing out 'Hyperopt' a python library for hyperparameter tuning optimizations. Currently it offers two algorithms in optimization: 1. Random Search and 2. Tree of Parzen Estimators-TPE which is a Bayesian approach. I followed <a href='https://towardsdatascience.com/an-example-of-hyperparameter-optimization-on-xgboost-lightgbm-and-catboost-using-hyperopt-12bc41a271e' style={{color:'#f1c40f'}}>this </a>article for understanding how to use this library. Note: The search space optimization takes a lot of time as the algorithm plays around with a range of values so the range of values should be chosen carefully.
-  
-            </p>
-            <br />
-            <p>
-                The training data contained data points prior to 2020 as I wanted to see how efficient the model would be in predicting the spike of 2020 and 2021-too ambitious of me. Since I am making a one step forward prediction, in this case an hourly prediction model will predict the first record in the test dataset. <br />
-
-                Afterwards I added the real observation from the test set to the train set, refit the model, then predict the next step in the test dataset.
-            </p>
-
-            <br />
-            <Section row nopadding>
-            <img src='/images/9.png' style={{'max-width':'700px','maxHeight':'700px','padding':'20px'}} />
-            <LeftSection style={{'marginTop':'20px'}}>
-                
-                <br />
-                <p>The model performance was not bad, although it failed to predict the spike of 2021. RMSE- Root 
-            Mean Squared Error- came to be 7821.329 which can be improved. But the model did perform very well when the market was stagnant.  
-                    </p> <br />
-                    
-            
-            </LeftSection >
-
-            </Section>
-            <Section><img src='/images/10.png' style={{'max-width':'500px','maxHeight':'600px','padding':'20px'}} /></Section>
-            <br />
-            <h3>LSTM</h3>
-            <br />
-            <p>Long Short-Term Memory-LSTM models are a type of recurrent neural network capable of learning sequences of observations. This makes them a deep learning network well suited for time series forecasting. However, usually a LTSM would struggle with a time series dataset as volatile and unpredictable as Bitcoin. After a grueling process of trying to apply my data, I finally trained the model. In my final fit I used 50 epochs and the “adam” optimizer. </p>
-            <br />
-            <Section row nopadding>
-            <img src='/images/11.png' style={{'max-width':'700px','maxHeight':'700px','padding':'20px'}} />
-            <LeftSection style={{'marginTop':'20px'}}>
-                
-                <br />
-                <p>The model performance was far better than XG Boost, this demonstrated the power of Deep Learning models for these problems. RMSE- Root 
-            Mean Squared Error- came to be 5200.270 which can be improved. As Deep Learning models require more datat points, I will be testing out by adding more technical indicators like MACD, Boilinger Bands etc and see the change in performances.  
-                    </p> <br />
-                    
-            
-            </LeftSection >
-
-            </Section>
-            <h3>Ensemble Classification</h3>
-            <br />
-            <p>After the feature engineering step of creating a 'Trend' variable showing 0 for market going down and 1 for market going up, the problem statement became a Classification problem statement.  </p>
+            <p>RNN</p>
+            <p>Autocorrelation </p>
+            <p></p>
 
         </Container>
         <style jsx>{`
@@ -255,4 +195,4 @@ const Project1_detail=(props)=>(
 )
 
 
-export default Project1_detail;
+export default Project2_detail;
