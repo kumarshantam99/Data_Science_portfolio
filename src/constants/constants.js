@@ -2,7 +2,7 @@ import Router from 'next/router';
 export const projects = [
   {
     title: 'Bitcoin Market Prediction',
-    description: "The project focuses on developing CI/CD pipeline testing Machine Learning models to predict future Bitcoin Prices and Market trends using Historical OHLCV Data, Technical Indicators, US Dollar Index Prices, Blockchain data and feature engineering.",
+    description: "The project focuses on developing CI/CD pipeline testing Machine Learning models to predict future Bitcoin Prices and Market trends using Historical OHLCV Data, Technical Indicators, Blockchain data and feature engineering.",
       image: '/images/1.png',
       tags: ['Machine Learning', 'CI/CD', 'Pipeline'],
     source: `/project1`,

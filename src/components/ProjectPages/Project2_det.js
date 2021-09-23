@@ -9,7 +9,7 @@ const Project2_detail=(props)=>(
     
     <Section row nopadding>
         
-        <img src='/images/bitcoin.gif' size='medium' />
+        <img src='/images/ts.gif' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
         <LeftSection>
         <SectionTitle main center>
        Time Series Modeling 
@@ -29,12 +29,11 @@ const Project2_detail=(props)=>(
            <SectionDivider />
            <br />
             <p>
-            Purchasing stock gives us ownership in a company whereas purchasing bitcoin grants us ownership of that cryptocurrency. Bitcoin prices are primarily affected by its supply, the market’s demand for it, availability and competing cryptocurrencies.
-
+            Time series data is a type of experimental data that has been observed over a period of time (usually evenly spaced, like once a day or once an hour or once a minute). The data on airline ticket sales each day, for example, is a time series. However, just because a set of occurrences includes a time component does not make it a time series; for example, the dates of significant aircraft catastrophes are not time series since they are arbitrarily spaced. 
             </p>
             <br />
             <p>
-                Unlike investing in traditional currencies, bitcoin is not issued by a central bank or backed by a government; therefore, the monetary policy, inflation rates, and economic growth measurements that typically influence the value of currency do not apply to bitcoin.
+            Time Series have several key features such as trend, seasonality, and noise.Forecasting is the process of making predictions of the future, based on past and present data.
             </p>
             <br />
             <br />
@@ -42,138 +41,127 @@ const Project2_detail=(props)=>(
             
             
 
-            <h2>What causes bitcoin prices to go up or down?</h2>
+            <h2>Overview</h2>
             <br />
-            <p>
-                <i>Cost of production has a correlation with price.</i> <br />
-                <br />
-                Social media influences, media coverage- positive or negative press affecting panic sell, speculations, and availability. Volume of the bitcoin sold on the market increases, the price decreases. More institutions adopt bitcoin as an investment and medium of exchange, its price increases.</p>
-
-            <br />
-            <p>While bitcoin is the most dominant crypto related to market capitalizations, altcoins like Ethereum, Tether (USDT), Cardano etc. are among its closest competitions. The crowded field keeps the prices down.
-            Fortunately for bitcoin, its high visibility gives it an edge over its competitors.
-            </p>
-            <br />
-            <p>Bitcoin’s algorithm only allows for one block of bitcoin to be found on average once every 10 minutes. This means that more miners join the competition for solving the Math problem, the problem becomes more difficult- and thus more expensive. Bitcoin’s market price is closely related to its marginal cost of production.</p>
-            <br />
-            <p>The more popular an exchange becomes, the easier it may draw in additional participants to create a network effect. And by capitalizing this, the exchange may set rules governing how other currencies are added. Bitcoin’s presence on these exchanges implies a level of regulatory compliance, regardless of the legal gray area in which cryptocurrencies operate.</p>
-            <br />
-            <br />
-            <SectionDivider />
-            <br />
-            <h2>Fundamental Prediction Methodologies</h2>
-            <br />
-            <p>Most predictive models for capital markets, in general, and specifically crypto assets can be grouped in the following categories:
-            </p>
-            <br />
+            <p>This project mainly focuses on EDA Reports and Time series forecasting. Scopes of the project are:</p>
             <ul>
-                <li>
-                <strong>Time-series forecasting:</strong> Time-series forecasting methods such as ARIMA or Prophet focus on predicting a specific variable based on known time-series attributes. They are incredibly easy to implement but showed some very poor resiliency to market variations which are common in crypto. Furthermore, one of the biggest limitations of time series methods is that they rely on a small and fixed number of predictors which proven to be insufficient to describe the behavior of crypto assets.
-
-                </li>
-                <li>
-                <strong>Traditional machine learning:</strong> Machine learning methods such as linear regression or decision trees have been at the center of predictive models in capital markets for the last decade. Most traditional machine learning models have trouble generalizing knowledge and are very prompt to underfit.
-
-                </li>
-                <li>
-                <strong>Deep learning methods:</strong> Deep learning proposes deep neural network methods for uncovering non-linear relationships between variables that can lead to price predictions. Deep learning models can achieve decent levels of performance when it comes to predictions. However, it's near impossible to interpret what these models are doing internally given its complexity and they are challenging to implement.
-
-                </li>
+                <li>Understanding different altcoins like Litecoin, Ethereum etc.</li>
+                <li>Can I correlate their movements with BTC?</li>
+                <li>Time Series component Analysis</li>
+                <li>Time series stationarity tests</li>
+                <li>Vector Autoregressive Model implementation</li>
+                <li>Facebook Prophet Forecasts</li>
+                <li>Can I use XGBoost/Supervised learning for Time Series problems?</li>
             </ul>
             <br />
             <SectionDivider />
             <br />
-            <h2>Data Acquisition</h2>
+            <h2>Understanding various Altcoins</h2>
             <br />
-            <p>
-                I have used the Bitstamp dataset which was downloaded from <a href='https://www.kaggle.com/mczielinski/bitcoin-historical-data' style={{color:'#f1c40f'}}> Kaggle </a> . The dataset comprises 1 minute data from 2012/01/01 to 2021/03/31.
-                <br />
-                <br />
 
-                I used <a href='https://developers.shrimpy.io/' style={{color:'#f1c40f'}}>Shrimpy</a> to get the testing data for my Analysis as its API is public, and it covers major exchanges all around the world. Its endpoints provide access to historical OHLCV prices and order books across various exchanges and analytics like weekly prediction of price, trend analysis of the asset and market insights that I can incorporate to validate my models' performance.</p>
-
-            <br />
-            <SectionDivider />
-            <br />
-            <h2>Feature Engineering</h2>
-            
-            <Section row nopadding>
-            <img src='/images/6.png' style={{'max-width':'80%','padding':'20px'}} />
-            <LeftSection style={{'marginTop':'20px'}}>
-                <strong>The usual process of Data Cleaning!</strong>
-                <br />
-                <br />
-                <p>Years 2012 to 2015 saw a lot of missing values in the dataset as those were the starting years for BTC and there was a lot of downtime in APIs all over the world. I decided to remove data points before 2017 as there was not much traction in price prior to that. It was after 2016 only when things started looking promising for BTC.  </p>
-            
-            </LeftSection >
-
-            </Section>
-            <br />
-            <Section row nopadding>
-            <img src='/images/7.png' style={{'max-width':'80%','padding':'20px'}} />
-            <LeftSection style={{'marginTop':'20px'}}>
-                
-                <br />
-                <p>The 'Close' prices and all other columns are obviously distriuted in a weird distribution pattern. To make some sense out of it-I converted the data points to normal distribution using log differencing.
-                      </p>
-                    <br />
-                    <p>
-                    The coefficient of correlation between two values in a time series is called the autocorrelation function. The ACF is a way to measure the linear relationship between an observation at time t and the observations at previous times.
-                    </p> <br />
-                    <p>The PACF is most useful for identifying the order of an autoregressive model. Specifically, sample partial autocorrelations that are significantly different from 0 indicate lagged terms of that are useful predictors of .</p>
-            
-            </LeftSection >
-
-            </Section>
-            <br />
-            <p>I decided to tackle two problem statements for the project: </p>
-            
-            <ul>
-                <li>Regression Problem: Predict Future 'Close' prices.</li>
-                <li>Classification Problem: Predict the Market trend - '0' for market going down and '1' for market going up.</li>
-            </ul>
-            <p>For Classification, I shifted the 'Close' prices to the preferred prediction horizon-15 minutes, 30 minutes and an hour into the future. I then created a 'Trend' variable by comparing the 'Close' and the 'Shifted Price' columns. </p>
-            <br /><p>
-            This was a perfect setup now to play around with Technical Indicators to provide some statistical features toML models for better decision making. I used <a href='https://github.com/twopirllc/pandas-ta' style={{color:'#f1c40f'}}>Pandas TA</a> library to add these technical indicators as it is a wrapper around Pandas library. I experimented with Volatility and Momentum indicators to use the best ones as some of the indicators contradict each other.</p>
-            <br />
-            <p>For Regression, I had to think of ways to make my models stand out. I read an article in Wall Street journal and watched <a href="https://www.youtube.com/watch?v=HhOuvNDMlI0" style={{color:'#f1c40f'}}>this video</a> stating how US Dollar Index Price is inversely correlated with Bitcoin Price. I also added Blockchain data from . Since data points for the added datasets are sampled on a ddaily basis I converted them to hourly or the prediction horizon data using Resample method in Pandas and filling the missing values with ffill. </p>
-            <br />
-            <SectionDivider />
-            <br />
-            <h2>Pipeline with CI/CD setup</h2>
-            <br />
-            <strong>Always have a clean and planned workflow!</strong>
-            <br />
-            <br />
-            <p>Data Science project has a lot different constraints in terms of project tracking, integration and deployment than a regular Software Engineering project. Datasets used in a DS project are too large to be tracked by Github. With so many model experimentations owing to trying out different feature engineering techniques, playing around with Hyperparameters and other fun stuff it can become pretty messy to keep a track of all the experiments and then compare all the models.</p>
-            <br />
-            <p>After spending a lot of time at <a href='https://medium.com/'style={{color:'#f1c40f'}}>Medium</a> I came across an interesting versioning tool called <a href='https://dvc.org/'style={{color:'#f1c40f'}}>DVC</a>- Data version Control. DVC offers services like tracking large Dataset and Models using Git as a tracking tool for all the projects without having to configure Git LFS. DVC offers other features like comparing results across all the branches of the project on Git to create shareable metrics reports for team members. DVC creates a '.dvc' extension for all the files that you want to track using Git and Git only tracks the .dvc extension. I also used DVC pipelining to layout the different '.py' files associated with different stage of the project like Data Acquisition, Preprocessing, Training and Validation. The configuraations are stored in 'dvc.yml' file at the root directory. The entire pipeline can be run using a single command: <i>dvc repro.</i></p>
-            <br />
-            <Section row nopadding>
-            <img src='/images/8.png' style={{'max-width':'500px','maxHeight':'700px','padding':'20px'}} />
-            <LeftSection style={{'marginTop':'20px'}}>
-                
-                <br />
-                <p>DVC offers an interesting tool called as <a href='https://cml.dev/'style={{color:'#f1c40f'}}>CML</a>- Continuous Machine Learning.
-                      </p>
-                    <br />
-                    <p>
-                    CML offers the flexible action of using Github Actions to generate reports with metrics and plots in each Git Pull Request. The structure of a '*.yaml' file is shown. This file should always be put in '.github/workflows/' created at root of the present working directory. I could track all my experiemnts across various branches and the use CML to create a rport of performance difference between various branches using 'git prune'.
-                    </p> <br />
-                    
-            
-            </LeftSection >
-
-            </Section>
-            <br />
-            <SectionDivider />
-            <br />
-            <h2>ML Modeling</h2>
-            <br />
-            <p>XGBoost different performances
+            <p>The dataset used for the research is the hourly OHLCV data downloaded using the public API of Cryptocompare for Bitstamp exchange. The choice of hourly data was solely because of the fact that the API limits the response to 2000 samples, which is 2.7 months of data (May 2021 to Present).
 
             </p>
-            <p>RNN</p>
+            <br />
+            <Section row nopadding>
+        
+                <img src='/images/12.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+                <LeftSection>
+                    <ul>
+                        <li>LTC closing price was not over $100 for many hours.</li>
+                        <li>It has a right-skewed distribution because a natural limit prevents outcomes on one side.</li>
+                        <li>The blue dashed line (median) shows that half of the time closing prices were under $163.50.</li>
+                        <li>The range of price movement for Litecoin for the 2.7 months period which revealed the range was between 150 and 250.</li>
+                    </ul>
+                </LeftSection >
+            </Section>
+            <br />
+            <Section row nopadding>
+        
+                <img src='/images/13.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+                <LeftSection>
+                <img src='/images/14.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+                </LeftSection >
+            </Section>
+            <br />
+            <Section row nopadding>
+        
+                <img src='/images/15.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+                <LeftSection>
+                <img src='/images/16.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+                </LeftSection >
+            </Section>
+            
+            <br />
+            <p>
+            The Pearson’s correlation score was calculated and plotted as heatmap for visualization. BTC, ETH and LTC were highly correlated in the past 2 months. This means, when BTC closing price increased, ETH and LTC followed.
+            </p>
+            <br />
+            <Section row nopadding>
+        
+                <img src='/images/17.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+                <LeftSection>
+                <p style={{marginTop:'20px'}}>After reading an interesting article on Wall Street’s journal and watching this <a href='https://www.youtube.com/watch?v=HhOuvNDMlI0' style={{color:'#f1c40f'}}>video</a> I decided to add a new column to my time series data and the new column was US Dollar Index Futures Historical Price Data from <a href='https://www.investing.com/currencies/us-dollar-index-historical-data' style={{color:'#f1c40f'}}>here </a>downloaded at daily intervals from 2012 to 2021. The missing values were imputed using Pandas.DataFrame.interpolate() function from Pandas library. The plot clearly shows US Dollar Price (in green) has an inverse correlation with the BTC close price which can be an interesting predictor for the problem.
+                </p>
+                </LeftSection >
+            </Section>
+            <br />
+
+            <SectionDivider />
+            <br />
+            <h2>Time Series Analysis</h2>
+            <br />
+            <p>
+                <ul>
+                    <li>Time series analysis requires converting the dataset with normal indices to Datetime indices to make it a time series data.</li>
+                    <li>
+                        The first thing I did, after Feature Engineering steps from BTC Market prediction project, is to check for stationarity of the dataset.
+                    </li>
+                    <li>Time series are stationary if they donot have trend or seasonal effects. Summary statistics calculated on the time series are consistent over time like the mean or the variance of the observation. </li>
+                    <li>I used ADF  (Augmented Dickey-Fueller Test) to check for the stationarity of the dataset. If the result of p-value after the test is less than the significance level (generally taken 0.05) then the data is said to be stationary.</li>
+                    <li>Inital test resulted in p-value to be close to 1. After applying differencing (using Pandas' .diff() function) the p-value came close to 0 which proved the data has now become stationary. </li>
+                </ul>
+                
+
+                </p>
+
+            <br />
+            <SectionDivider />
+            <br />
+            <h2>Vector Autoregression</h2>
+            <br />
+            <p>Vector Autoregression (VAR) is a forecasting algorithm that can be used when two or more time series influence each other. That is, the relationship between the time series involved is bi-directional. In this post, we will see the concepts, intuition behind VAR models and see a comprehensive and correct method to train and forecast VAR models in python using statsmodels.</p>
+            <br />
+            <p>the basic requirements in order to use VAR are:</p>
+            <ul>
+                <li>At least two time series (variables)</li>
+                <li>The time series should influence each other.</li>
+            </ul>
+            <p>I used three Time series features: Close (Close Price of BTC), Volume of BTC and Price (US Dollar Index Price)</p>
+            <br />
+            <Section>
+            <img src='/images/18.png' style={{maxWidth:'600px',maxHeight:'750px',marginRight:'20px'}} />
+
+            </Section >
+
+
+            <br />
+            <SectionDivider />
+            <br />
+            <h2>Facebook Prophet</h2>
+            <br />
+            <p>Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Prophet is robust to missing data and shifts in the trend, and typically handles outliers well. Refer Prophet <a href='https://facebook.github.io/prophet/' style={{color:'#f1c40f'}}>here.</a>
+            <br />
+            <br />
+The Prophet package provides intuitive parameters which are easy to tune. Even someone with minimum expertise in forecasting models can use this to make meaningful predictions for a variety of problems in a business scenario.
+
+            </p>
+            <br />
+            <p>In order to use Prophet, the dataset has to be divided into two variables: ds (datetime samples) and y(target variable). The first attempt I decided to use daily sampled datapoints to understand the baseline performance.</p>
+            <br />
+            <br />
+
+            <p>To improve model performance, I added Volume_BTC_ and Price(USD index price) as additional regressors for the model and resampled the daily data into hourly data to understand how granularity of data affects the model performance. </p>
             <p>Autocorrelation </p>
             <p></p>
 
