@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from '../../layout/LayoutStyles'
-
+import Image from 'next/image'
 import { LeftSection, Section, SectionText, SectionTitle, SectionDivider } from './Project1Styles';
 
 const Project2_detail=(props)=>(
@@ -164,12 +164,12 @@ The Prophet package provides intuitive parameters which are easy to tune. Even s
             <p>To improve model performance, I added Volume_BTC_ and Price(USD index price) as additional regressors for the model and resampled the daily data into hourly data to understand how granularity of data affects the model performance. </p>
             <br />
             <Section nopadding>
-                <iframe src="/images/prophet1.html" width='100%' height='500px'></iframe>
+                <iframe src="/images/prophet1" width='100%' height='500px'></iframe>
                 <p></p>
                 
             </Section>
             <Section>
-            <iframe src="/images/prophet2.html" width='100%' height='500px'></iframe>
+            <iframe src="/images/prophet2" width='100%' height='500px'></iframe>
 
             </Section>
             <p>Autocorrelation </p>
