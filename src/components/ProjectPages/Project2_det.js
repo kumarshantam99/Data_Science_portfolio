@@ -164,12 +164,12 @@ The Prophet package provides intuitive parameters which are easy to tune. Even s
             <p>To improve model performance, I added Volume_BTC_ and Price(USD index price) as additional regressors for the model and resampled the daily data into hourly data to understand how granularity of data affects the model performance. </p>
             <br />
             <Section nopadding>
-                <iframe src="/images/prophet1" width='100%' height='500px'></iframe>
+                <iframe src="/images/prophet1" loading="lazy" width='100%' height='500px'></iframe>
                 <p></p>
                 
             </Section>
             <Section>
-            <iframe src="/images/prophet2" width='100%' height='500px'></iframe>
+            <iframe src="/images/prophet2" loading="lazy" width='100%' height='500px'></iframe>
 
             </Section>
             <p>Autocorrelation </p>
