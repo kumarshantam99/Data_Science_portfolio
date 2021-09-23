@@ -51,7 +51,7 @@ const Project2_detail=(props)=>(
                 <li>Time series stationarity tests</li>
                 <li>Vector Autoregressive Model implementation</li>
                 <li>Facebook Prophet Forecasts</li>
-                <li>Can I use XGBoost/Supervised learning for Time Series problems?</li>
+                
             </ul>
             <br />
             <SectionDivider />
@@ -164,17 +164,32 @@ The Prophet package provides intuitive parameters which are easy to tune. Even s
             <p>To improve model performance, I added Volume_BTC_ and Price(USD index price) as additional regressors for the model and resampled the daily data into hourly data to understand how granularity of data affects the model performance. </p>
             <br />
             <Section nopadding>
-                <iframe src="/images/prophet1" loading="lazy" width='100%' height='500px'></iframe>
-                <p></p>
+            <img src='/images/19.png' style={{maxWidth:'100%',maxHeight:'750px'}} />
+            <br />
+                <p>The model is predicting price (yhat) of 43120.272423 for March 31, 2022. This prediction can not be said to be true or false yet. The model performance shows that the 2021 to 2022 is pretty much a bullish trend. Although the price prediction is far off starting from mid 2020 it can be considered a decent performance for baseline modelling.
+</p>
+<br /><p>The Green band shows upper range of prediction and blue line shows the lower range of prediction.</p>
                 
             </Section>
             <Section>
-            <iframe src="/images/prophet2" loading="lazy" width='100%' height='500px'></iframe>
+            <img src='/images/20.png' style={{maxWidth:'100%',maxHeight:'750px'}} />
+            <br />
+            <p>
+            The model was fit with hourly data points to add more granularity and more seasonal components to the data. The US Dollar Index Price was treated as an ‘auto-regressive’ feature to add more learning patterns for the model and see how the model performs.
 
+
+            </p>
+            <br />
+            <p>This time the model predicts 66197.15 as the upper limit for price for March 31, 2022 which can be true considering what I have been seeing on reddit posts and ‘To the moon’ chants.
+</p>
+<br /><p>This time the prediction line did reduce in gap from the actual line and also the upper limit for prediction increased from the last time. This was an interesting observation as increasing the granularity and adding extra variables like USD index price affect the prediction by a good margin.</p>
+            <br />
             </Section>
-            <p>Autocorrelation </p>
-            <p></p>
-
+            <Section row nopadding>
+            <img src='/images/21.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+            <p style={{marginTop:'20px'}}>As Prophet plots out different seasonal components of the timeseries data for our visualizations, we can uncover a lot of underlying patterns like what time of the day or what day of the month the price goes up or down- pretty neat stuff!! From both the plots, as there are two predictions, I can conclude that the prices are generally up after 8 PM and around weekends of March.</p>
+            <img src='/images/22.png' style={{maxWidth:'500px',maxHeight:'400px',marginRight:'20px'}} />
+            </Section>
         </Container>
         <style jsx>{`
                 ul {
