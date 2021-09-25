@@ -1,5 +1,5 @@
 {
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.defaultProfile.windows": "C:\\Program Files\\Git\\bin\\bash.exe (migrated)",
     "terminal.integrated.rightClickBehavior": "default"
 }
